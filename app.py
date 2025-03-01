@@ -6,7 +6,9 @@ import os
 
 # Load environment variables
 load_dotenv()
-user_name_terms = os.getenv("USER_NAME_TERMS").split(",")
+#user_name_terms = os.getenv("USER_NAME_TERMS").split(",")
+user_name_terms = st.secrets["USER_NAME_TERMS"]
+user_name_terms = user_name_terms.split(",")
 
 # Initialize authentication state
 if 'authenticated' not in st.session_state:
